@@ -1,5 +1,4 @@
-### DEPRECATED! There will be no further development. Please use https://github.com/derekparker/delve. But if you want to keep the project going and ready to become its maintaner please contact us and we can make you one.
-
+### DEPRECATED! Please use https://github.com/derekparker/delve for Intel based solution. The problem is delve does not work on ARM processors (Raspberry Pi).
 
 godebug
 
