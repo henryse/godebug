@@ -2,7 +2,7 @@ package main
 
 import (
 	godebug "fmt"
-	_godebug "github.com/mailgun/godebug/lib"
+	_godebug "github.com/henryse/godebug/lib"
 )
 
 var name_conflicts_in_go_scope = _godebug.EnteringNewFile(main_pkg_scope, name_conflicts_in_go_contents)
@@ -107,16 +107,14 @@ func main() {
 }
 `
 
-
 var main_pkg_scope = &_godebug.Scope{}
 
 func init() {
 	main_pkg_scope.Vars = map[string]interface{}{
-		"f": &f,
+		"f":      &f,
 		"_scope": &_scope,
 	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
 		"main": main,
 	}

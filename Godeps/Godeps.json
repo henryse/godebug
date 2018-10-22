@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/mailgun/godebug",
+	"ImportPath": "github.com/henryse/godebug",
 	"GoVersion": "go1.4.1",
 	"Packages": [
 		"./..."

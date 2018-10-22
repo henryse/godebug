@@ -10,7 +10,7 @@ import (
 	"testing"
 	"text/scanner"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/golang.org/x/tools/go/types"
+	"github.com/henryse/godebug/Godeps/_workspace/src/golang.org/x/tools/go/types"
 )
 
 var typeParserTests = []struct {

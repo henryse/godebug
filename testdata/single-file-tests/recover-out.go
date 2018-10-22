@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/henryse/godebug/lib"
 	"log"
-	"github.com/mailgun/godebug/lib"
 )
 
 var recover_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, recover_in_go_contents)
@@ -317,7 +317,6 @@ func recoverThenPanic() {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
@@ -325,16 +324,15 @@ func init() {
 		"r3": &r3,
 		"r4": &r4,
 	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
-		"r1": r1,
-		"r2": r2,
-		"doPanic": doPanic,
-		"doNestedRecover": doNestedRecover,
-		"main": main,
+		"r1":                  r1,
+		"r2":                  r2,
+		"doPanic":             doPanic,
+		"doNestedRecover":     doNestedRecover,
+		"main":                main,
 		"recovererWithParams": recovererWithParams,
-		"doNestedPanic": doNestedPanic,
-		"recoverThenPanic": recoverThenPanic,
+		"doNestedPanic":       doNestedPanic,
+		"recoverThenPanic":    recoverThenPanic,
 	}
 }

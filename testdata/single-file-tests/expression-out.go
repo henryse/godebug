@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mailgun/godebug/lib"
+import "github.com/henryse/godebug/lib"
 
 var expression_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, expression_in_go_contents)
 
@@ -74,7 +74,6 @@ func main() {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
@@ -86,6 +85,6 @@ func init() {
 	}
 	main_pkg_scope.Funcs = map[string]interface{}{
 		"plusTwo": plusTwo,
-		"main": main,
+		"main":    main,
 	}
 }

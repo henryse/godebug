@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mailgun/godebug/lib"
+	"github.com/henryse/godebug/lib"
 )
 
 var switch_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, switch_in_go_contents)
@@ -149,16 +149,13 @@ func main() {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
-	main_pkg_scope.Vars = map[string]interface{}{
-	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Vars = map[string]interface{}{}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
-		"foo": foo,
+		"foo":  foo,
 		"main": main,
 	}
 }

@@ -5,7 +5,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
 	"go/parser"
 	"reflect"
 	"strings"

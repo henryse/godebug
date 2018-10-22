@@ -12,4 +12,4 @@ package main
 const doGopathWorkaround = true
 
 // Old syntax for -X flag.
-const buildModeFlag = "-X github.com/mailgun/godebug/lib.buildMode test"
+const buildModeFlag = "-X github.com/henryse/godebug/lib.buildMode test"

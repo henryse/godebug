@@ -3,7 +3,7 @@
 godebug
 
 -------
-[![Linux Build Status](https://img.shields.io/travis/mailgun/godebug/master.svg?label=linux)](https://travis-ci.org/mailgun/godebug)
+[![Linux Build Status](https://img.shields.io/travis/henryse/godebug/master.svg?label=linux)](https://travis-ci.org/henryse/godebug)
 [![Windows Build Status](https://img.shields.io/appveyor/ci/jeremyschlatter/godebug/master.svg?label=windows)](https://ci.appveyor.com/project/jeremyschlatter/godebug/branch/master)
 
 
@@ -17,13 +17,13 @@ For more detail, see the [end of this README](#how-it-works-more-detail).
 
 ### Status
 
-`godebug` is still very new. [File an issue](https://github.com/mailgun/godebug/issues/new) or send me an email if you find any rough edges:
+`godebug` is still very new. [File an issue](https://github.com/henryse/godebug/issues/new) or send me an email if you find any rough edges:
 
 ![contact](https://s3.amazonaws.com/f.cl.ly/items/1d0i0W2e3F1K0L3K0Y1N/contact.png)
 
 ### Installation:
 
-    $ go get github.com/mailgun/godebug
+    $ go get github.com/henryse/godebug
 
 ### Getting started:
 
@@ -67,7 +67,7 @@ q(uit)               | exit the program
 
 ### Caveats
 
-It is not currently possible to step into standard library packages. (Issue [#12](https://github.com/mailgun/godebug/issues/12))
+It is not currently possible to step into standard library packages. (Issue [#12](https://github.com/henryse/godebug/issues/12))
 
 ### How it works (more detail)
 

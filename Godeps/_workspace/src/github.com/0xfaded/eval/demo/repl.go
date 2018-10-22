@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
 )
 
 // Simple replacement for GNU readline

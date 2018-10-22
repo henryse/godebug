@@ -2,7 +2,7 @@ package eval_test
 
 import (
 	"fmt"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/0xfaded/eval" //makeEnv creates an environment to use in eval
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/0xfaded/eval" //makeEnv creates an environment to use in eval
 	"go/parser"
 	"reflect"
 )

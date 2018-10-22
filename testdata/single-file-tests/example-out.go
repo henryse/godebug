@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mailgun/godebug/lib"
+	"github.com/henryse/godebug/lib"
 )
 
 var example_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, example_in_go_contents)
@@ -129,17 +129,14 @@ func mul(n, m int) int {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
-	main_pkg_scope.Vars = map[string]interface{}{
-	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Vars = map[string]interface{}{}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
 		"main": main,
-		"add": add,
-		"mul": mul,
+		"add":  add,
+		"mul":  mul,
 	}
 }

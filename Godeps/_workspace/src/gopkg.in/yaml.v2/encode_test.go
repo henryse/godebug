@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/gopkg.in/yaml.v2"
+	"github.com/henryse/godebug/Godeps/_workspace/src/gopkg.in/yaml.v2"
 	. "gopkg.in/check.v1"
 	"net"
 	"os"

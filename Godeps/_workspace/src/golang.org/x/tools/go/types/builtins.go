@@ -10,8 +10,8 @@ import (
 	"go/ast"
 	"go/token"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/golang.org/x/tools/go/ast/astutil"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/golang.org/x/tools/go/exact"
+	"github.com/henryse/godebug/Godeps/_workspace/src/golang.org/x/tools/go/ast/astutil"
+	"github.com/henryse/godebug/Godeps/_workspace/src/golang.org/x/tools/go/exact"
 )
 
 // builtin type-checks a call to the built-in specified by id and

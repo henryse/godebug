@@ -13,8 +13,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/kylelemons/godebug/diff"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/gopkg.in/yaml.v2"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/kylelemons/godebug/diff"
+	"github.com/henryse/godebug/Godeps/_workspace/src/gopkg.in/yaml.v2"
 )
 
 var parallel = flag.Int("parallel-tests", 40, "Max number of CLI tests to run in parallel")

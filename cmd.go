@@ -15,10 +15,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/bitbucket.org/JeremySchlatter/go-atexit"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/kisielk/gotool"
-	"github.com/mailgun/godebug/Godeps/_workspace/src/golang.org/x/tools/go/loader"
-	"github.com/mailgun/godebug/gen"
+	"github.com/henryse/godebug/Godeps/_workspace/src/bitbucket.org/JeremySchlatter/go-atexit"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/kisielk/gotool"
+	"github.com/henryse/godebug/Godeps/_workspace/src/golang.org/x/tools/go/loader"
+	"github.com/henryse/godebug/gen"
 )
 
 var (
@@ -368,7 +368,7 @@ func generateSourceFiles(conf *loader.Config, subcommand string) (tmpDirPath str
 		case "std":
 			logFatalf("godebug %s: reserved name \"std\" cannot be passed in the -instrument flag."+
 				"\ngodebug cannot currently instrument packages in the standard library."+
-				"\nDo you wish it could? Chime in at https://github.com/mailgun/godebug/issues/12",
+				"\nDo you wish it could? Chime in at https://github.com/henryse/godebug/issues/12",
 				subcommand)
 		default:
 			for _, path := range gotool.ImportPaths([]string{pkg}) { // wildcard "..." expansion
@@ -445,7 +445,7 @@ func markAlmostAllPackages(prog *loader.Program, stdLib map[string]bool) {
 		// skip this package if...
 		case stdLib[path]: // it's part of the standard library
 		case prog.ImportMap[path] == nil: // it's a Created package
-		case strings.HasPrefix(path, "github.com/mailgun/godebug"):
+		case strings.HasPrefix(path, "github.com/henryse/godebug"):
 			// it's the godebug library or one of its dependecies
 
 		// otherwise include it
@@ -534,10 +534,10 @@ func mapPkgsToTmpDir(pkgs []string) []string {
 func findUnderGopath(cwd, pkg string) (string, string) {
 	found, err := build.Import(pkg, cwd, build.FindOnly)
 	if err != nil {
-		logFatalf("Failed to find package %q in findUnderGopath. This is probably a bug -- please report it at https://github.com/mailgun/godebug/issues/new. Thanks!", pkg)
+		logFatalf("Failed to find package %q in findUnderGopath. This is probably a bug -- please report it at https://github.com/henryse/godebug/issues/new. Thanks!", pkg)
 	}
 	if found.SrcRoot == "" || found.ImportPath == "" {
-		logFatalf("Looks like package %q is not in a GOPATH workspace. godebug doesn't support it right now, but if you open a ticket at https://github.com/mailgun/godebug/issues/new we'll fix it soon. Thanks!", pkg)
+		logFatalf("Looks like package %q is not in a GOPATH workspace. godebug doesn't support it right now, but if you open a ticket at https://github.com/henryse/godebug/issues/new we'll fix it soon. Thanks!", pkg)
 	}
 	return found.ImportPath, found.Dir
 }

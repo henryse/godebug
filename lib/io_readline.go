@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/peterh/liner"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/peterh/liner"
 )
 
 var (
@@ -53,7 +53,7 @@ var stopBugging = false
 
 func checkReadlineErr(err error) {
 	if err != nil && !stopBugging {
-		fmt.Println("\nWhoops! You found a godebug issue. Could you report it at https://github.com/mailgun/godebug/issues/new ?\nWe failed to adjust the terminal mode because of this error:", err)
+		fmt.Println("\nWhoops! You found a godebug issue. Could you report it at https://github.com/henryse/godebug/issues/new ?\nWe failed to adjust the terminal mode because of this error:", err)
 		stopBugging = true
 	}
 }

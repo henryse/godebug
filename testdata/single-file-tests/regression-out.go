@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mailgun/godebug/lib"
+import "github.com/henryse/godebug/lib"
 
 var regression_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, regression_in_go_contents)
 
@@ -496,25 +496,23 @@ func init() {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
 	main_pkg_scope.Vars = map[string]interface{}{
 		"nestedSwitch": &nestedSwitch,
 	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
-		"main": main,
-		"_switch": _switch,
-		"_select": _select,
-		"name1": name1,
-		"name2": name2,
-		"doFallthrough": doFallthrough,
-		"a": a,
-		"switchInit": switchInit,
-		"constants": constants,
+		"main":            main,
+		"_switch":         _switch,
+		"_select":         _select,
+		"name1":           name1,
+		"name2":           name2,
+		"doFallthrough":   doFallthrough,
+		"a":               a,
+		"switchInit":      switchInit,
+		"constants":       constants,
 		"unexportedField": unexportedField,
 	}
 }

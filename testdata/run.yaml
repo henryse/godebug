@@ -303,7 +303,7 @@ invocations:
 transcript: |
     godebug run: reserved name "std" cannot be passed in the -instrument flag.
     godebug cannot currently instrument packages in the standard library.
-    Do you wish it could? Chime in at https://github.com/mailgun/godebug/issues/12
+    Do you wish it could? Chime in at https://github.com/henryse/godebug/issues/12
 
 nonzero_exit: true
 

@@ -10,7 +10,7 @@ import (
 	"go/token"
 	"strings"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/golang.org/x/tools/go/exact"
+	"github.com/henryse/godebug/Godeps/_workspace/src/golang.org/x/tools/go/exact"
 )
 
 var (

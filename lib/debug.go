@@ -10,7 +10,7 @@ import (
 	"unicode"
 	"unsafe"
 
-	"github.com/mailgun/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
+	"github.com/henryse/godebug/Godeps/_workspace/src/github.com/0xfaded/eval"
 )
 
 var buildMode = "" // overwritten by -ldflags in tests
@@ -341,7 +341,7 @@ func waitForInput(scope *Scope, line int) {
 							if r.CanAddr() {
 								r = reflect.NewAt(r.Type(), unsafe.Pointer(r.UnsafeAddr())).Elem()
 							} else {
-								s[i] = fmt.Sprintf("godebug cannot access this field or method. Sorry! Let us know about it at github.com/mailgun/godebug/issues/new and we'll fix it")
+								s[i] = fmt.Sprintf("godebug cannot access this field or method. Sorry! Let us know about it at github.com/henryse/godebug/issues/new and we'll fix it")
 							}
 						}
 						ifc := r.Interface()

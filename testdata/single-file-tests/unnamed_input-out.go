@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mailgun/godebug/lib"
+import "github.com/henryse/godebug/lib"
 
 var unnamed_input_in_go_scope = godebug.EnteringNewFile(main_pkg_scope, unnamed_input_in_go_contents)
 
@@ -40,16 +40,13 @@ func foo(int, int) (string, error) {
 }
 `
 
-
 var main_pkg_scope = &godebug.Scope{}
 
 func init() {
-	main_pkg_scope.Vars = map[string]interface{}{
-	}
-	main_pkg_scope.Consts = map[string]interface{}{
-	}
+	main_pkg_scope.Vars = map[string]interface{}{}
+	main_pkg_scope.Consts = map[string]interface{}{}
 	main_pkg_scope.Funcs = map[string]interface{}{
 		"main": main,
-		"foo": foo,
+		"foo":  foo,
 	}
 }
